@@ -59,10 +59,30 @@ public class Program
   }
 }
 ```
+Expected result s1 > s2
+Generic list allows to be processed faster than a ArrayList
 
 2. How to write and use extension methods 
+public class Program 
+{
+  public void Main(string[] args) 
+  {
+    string text = 123.Test();
+    Console.WriteLine(text);
+  }
+}
+
+public static class Extension 
+{
+  public static string Test(this int number) 
+  {
+    string s = number.ToString();
+    return s;
+  }
+}
 
 3. What are the differences between IEnumerable and IQueryable interfaces?
+The most obvious diffrence is that IQueryable query fetches filtered data from the database.
 
 4. What is the output
 ```csharp
@@ -85,6 +105,8 @@ public class Program
   }
 }
 ```
+Static constructor
+Main
 
 5. Rewrite this code block without `using` statement
 ```csharp
@@ -103,6 +125,8 @@ public class Program
 }
 
 ```
+I am not sure.
+
 
 6. What do you expect for the output and what is the cause of the difference between s1 and s2?
 ```csharp
@@ -156,6 +180,7 @@ public class Program
   }
 }
 ```
+s1 < s2 because _arr1 work faster it's array created by giving value.
 
 7.  What is the output?
 ```csharp
@@ -205,6 +230,10 @@ public class DrawDemo
   }
 }
 ```
+I am a Triangle.
+I am a Circle.
+I am a drawing object.
+I am a drawing object.
 
 8. If you find any potential bugs, fix the code
 ```csharp
@@ -218,6 +247,7 @@ public async Task<ActionResult<object>> GetTodoItem(long id)
   }
 }
 ```
+I am not sure.
 
 9. Explain difference between 2 methods
 ```csharp
@@ -254,6 +284,9 @@ public class Program
   }
 }
 ```
+Since there is an await command in the 1st method, it will continue to run the codes until the result of the query is received.
+But in the 2nd method, it will wait until the response is received. 
+
 
 10. What is the output?
 ```csharp
@@ -268,3 +301,8 @@ public class Program
   }
 }
 ```
+1
+2
+or
+0
+2
